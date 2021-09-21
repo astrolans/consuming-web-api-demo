@@ -1,0 +1,17 @@
+<button (click)="loadPeople()">Load People</button>
+
+<ul>
+  <li *ngFor="let person of people">
+    {{ person.name}}
+  </li>
+</ul>
+
+<button (click)="loadTodos()">Load Todos</button>
+<button (click)="addDemoData()">Add Demo Data</button>
+
+<ul>
+  <li *ngFor="let item of todoes">
+    {{ item.description }} -{{ item.assignedTo }}
+    <button (click)="deleteItem(item.id)">X</button>
+  </li>
+</ul>
